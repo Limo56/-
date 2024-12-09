@@ -1,0 +1,379 @@
+/* Общие стили */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+h2 {
+    text-align: center;
+}
+
+/* Стили для шапки */
+header {
+    background-color: #222;
+    color: #fff;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #fff;
+}
+
+header nav .logo {
+    height: 50px;
+    width: auto;
+}
+
+header .nav-list {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+header .nav-list li {
+    display: inline;
+}
+
+header .nav-list li a:hover {
+    color: #f0a500;
+}
+
+/* Стили для основного контента */
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+main h1, main h2, main h3 {
+    color: #444;
+}
+
+main img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+main section {
+    margin-bottom: 40px;
+}
+
+aside {
+    background-color: #444;  /* Оранжевый фон для боковой панели */
+    padding: 10px;
+    margin: 10px;
+    color: #fff;  /* Белый текст для боковой панели */
+    border: 5px solid #222222a2;
+    position: fixed; /* Sticky aside */
+    bottom: 10px; /* Зафиксируем позицию при прокрутке */
+    right: 10px; 
+    width: 300px;
+}
+
+aside h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+aside p {
+    margin: 10px 0;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.toggle-btn {
+    background-color: rgba(0,0,0,0);
+    color: #fff;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 5px 10px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    transition: background-color 0.3s;
+}
+
+.toggle-btn:hover {
+    background-color: rgba(255, 255, 255, 0.214);
+}
+
+.hidden {
+    display: none; /* Скрывает элемент */
+}
+
+/* Стили для подвала */
+footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+footer a {
+    color: #f0a500;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Стили для мобильных устройств */
+@media (max-width: 768px) {
+    header nav {
+        flex-direction: column;
+    }
+
+    header .nav-list {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    main {
+        padding: 10px;
+    }
+}
+
+/* Дополнительные стили */
+#dreamlands img {
+    display: block; /* Устанавливаем изображение как блочный элемент */
+    margin: 40px auto; /* Пространство сверху и снизу, центрируем изображение */
+    width: auto; /* Автоматическая ширина */
+    max-width: 80%; /* Ограничиваем максимальную ширину */
+    height: auto; /* Сохраняем пропорции изображения */
+    border-radius: 10px; /* Закруглённые края */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Лёгкая тень */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.abbr {
+    cursor: help;
+    text-decoration: dotted underline;
+}
+
+/* CSS для карточек */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+}
+
+.card {
+    background-color: #fff;
+    padding: 20px;
+    width: calc(50% - 20px);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card img {
+    width: auto;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.card p {
+    text-align: center;
+}
+
+/* Медиазапрос для мобильных устройств */
+@media (max-width: 768px) {
+    .card {
+        width: 100%; /* Карточки занимают всю ширину экрана на мобильных */
+        margin-bottom: 20px; /* Добавляем отступ между карточками */
+    }
+}
+
+/* Стили для галереи */
+
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px; /* Добавляем отступы между карточками */
+}
+
+.gallery-container figure {
+    margin: 0; /* Убираем стандартные отступы */
+    text-align: center;
+    width: 200px; /* Ограничиваем ширину каждой карточки */
+}
+
+.gallery-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px; /* Закругленные края изображений */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Легкая тень под изображениями */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.gallery-container img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Увеличение тени при наведении */
+}
+
+.gallery-container figcaption {
+    margin-top: 4px; /* Отступ между изображением и подписью */
+    font-size: 1rem;
+    color: #222; /* Цвет текста */
+    font-weight: 500;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Легкая тень текста */
+}
+
+.gallery-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px; /* Закругленные края изображений */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Легкая тень под изображениями */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.img2 {
+    display: block; /* Устанавливаем изображение как блочный элемент */
+    margin: 40px auto; /* Пространство сверху и снизу, центрируем изображение */
+    width: auto; /* Автоматическая ширина */
+    max-width: 80%; /* Ограничиваем максимальную ширину */
+    height: auto; /* Сохраняем пропорции изображения */
+    border-radius: 10px; /* Закруглённые края */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Лёгкая тень */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.img2:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Увеличенная тень при наведении */
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    .gallery-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .gallery-container figure {
+        width: 90%; /* Ширина карточек на мобильных устройствах */
+    }
+
+    .gallery-container img {
+        width: 100%; /* Увеличиваем ширину изображений */
+        max-width: 100%; /* Ограничиваем максимальную ширину */
+    }
+}
+
+/* Общие стили для секции регистрации */
+#register {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin: 20px auto;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Заголовок формы */
+#register h2 {
+    text-align: center;
+    color: #333;
+    font-family: 'Sofia', sans-serif;
+    margin-bottom: 20px;
+}
+
+/* Стили для формы */
+#form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Стили для меток (label) */
+#form label {
+    font-size: 16px;
+    color: #555;
+    font-weight: bold;
+}
+
+/* Стили для полей ввода */
+#form input,
+#form select {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Стили для кнопки */
+#form button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #f0a500;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+/* Ховер-эффект для кнопки */
+#form button:hover {
+    background-color: #c98a03;
+}
+
+/* Добавление визуального акцента при фокусе на инпуты */
+#form input:focus,
+#form select:focus {
+    outline: none;
+    border-color: #f0a500;
+    box-shadow: 0 0 5px rgba(240, 165, 0, 0.5);
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    #register {
+        padding: 15px;
+        margin: 10px;
+    }
+
+    #form {
+        gap: 10px;
+    }
+
+    #form button {
+        font-size: 14px;
+    }
+}

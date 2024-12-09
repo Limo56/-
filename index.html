@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Авторская компания в НРИ DnD 5e</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="images/icon.jpg">
+</head>
+<body>
+    <!-- Шапка -->
+    <header>
+        <nav>
+            <a href="index.html"><img class="logo" src="images/logo.jpg" alt="Логотип DnD"></a>
+            <ul class="nav-list">
+                <li><a href="dreamlands.html">Страна грез</a></li>
+                <li><a href="pc_characters.html">Персонажи игроков</a></li>
+                <li><a href="mc_characters.html">Персонажи мастера</a></li>
+                <li><a href="gallery.html">Галерея</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Контент -->
+    <main>
+        <section>
+            <h2>О нашей кампании в Dungeons & Dragons</h2>
+            <p>
+                Добро пожаловать в мир Dungeons & Dragons (DnD) — легендарной настольной ролевой игры, где границы воображения определяют ход игры, а каждый участник вносит свою уникальную лепту в рассказ! 
+            </p>
+            <h2>Что такое DnD?</h2>
+            <p>
+                DnD, или НРИ (настольная ролевая игра), это вид досуга, который совмещает элементы импровизационного театра, решения задач, и стратегических боёв. В игре игроки берут на себя роли вымышленных персонажей, а Мастер игры — ведущий, который управляет сюжетом, описывает мир, и исполняет роли всех NPC (персонажей, не управляемых игроками).
+            </p>
+            <p>
+                DnD часто называют "театром масок", так как игра базируется на воображении и творческом взаимодействии. Правила игры изложены в книгах, таких как *Player's Handbook*, но ключевыми остаются уважение, сотрудничество и желание творить истории вместе.
+            </p>
+            <h2>Общие правила игры</h2>
+            <ul>
+                <li><strong>Количество игроков:</strong> Кампания обычно включает 3-7 игроков плюс Мастер игры.</li>
+                <li><strong>Роли:</strong> Каждый игрок создаёт персонажа с уникальными навыками, личностью и историей. Мастер игры разрабатывает мир и ведёт повествование.</li>
+                <li><strong>Воображение:</strong> Весь мир создаётся в вашем уме. Карты, миниатюры и изображения могут помочь, но не являются обязательными.</li>
+                <li><strong>Уважение:</strong> Слушайте друг друга, уважайте чужие идеи, избегайте конфликтов вне игры.</li>
+            </ul>
+            <h2>Присоединяйтесь к нам!</h2>
+            <p>
+                Наша авторская кампания открыта для новых игроков и мастеров! Мы разрабатываем увлекательный мир с уникальной историей, готовый принять новых героев. Если вы мечтали стать отважным воином, мудрым магом или хитроумным плутом, заполните форму ниже и присоединяйтесь к нашему приключению!
+            </p>
+        </section>
+    </main>
+
+
+    <section id="register">
+        <h2>Оставить заявку</h2>
+        <form id="form">
+            <label for="nickname">Никнейм:</label>
+            <input type="text" id="nickname" name="nickname" required>
+    
+            <label for="tg">ТГ (в виде @example):</label>
+            <input type="text" id="tg" name="tg" required>
+    
+            <label for="role">Выберите роль:</label>
+            <select id="role" name="role" required>
+                <option value="Мастер игры">Мастер игры</option>
+                <option value="Игрок">Игрок</option>
+            </select>
+    
+            <button type="button" id="register-button">Присоединиться</button>
+
+        </form>
+    </section>
+    <aside id="sidebar">
+        <h3>Совет дня</h3>
+        <p>Не забывайте кормить мастера на игре. Стратегическое использование вкусняшек может оказаться решающим фактором в 
+            успешной социальной сцене или при определении преимущества на поле боя.</p>
+        <button id="toggle-btn" class="toggle-btn">x</button>
+    </aside>
+    <!-- Подвал -->
+    <footer>
+        <p>Created by Dungeon Master Ирина Сидорова</p>
+        <address>Для вопросов пишите на: <a href="mailto:irina@example.com">irina@example.com</a></address>
+    </footer>
+    <!-- Джава  -->
+    <script src="js.js"></script>
+</body>
+</html>
